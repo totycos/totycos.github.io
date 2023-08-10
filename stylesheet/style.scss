@@ -1,0 +1,772 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:200,300,400,900');
+@import "bourbon/bourbon";
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f1efe1;
+}
+
+a{
+  text-decoration: none;
+}
+
+header{
+  width: 90%;
+  position: fixed;
+  padding-top: 10px;
+  margin-left: 7%;
+  z-index: 10;
+}
+
+#logo, #presentation, nav{
+  display: inline-block;
+}
+
+nav{
+  float: right;
+  margin-top: 25px;
+}
+
+.nav{
+  font-size: 11px;
+  display: inline-block;
+  margin-left: 20px;
+  letter-spacing: 2px;
+  color: black;
+}
+.nav:hover{
+  cursor: pointer;
+}
+
+#presentation{
+  vertical-align: top;
+  margin-left: 10px;
+  margin-top: 3px;
+}
+
+#presentation>h2{
+  font-size: 12px;
+}
+
+#presentation>p{
+  font-size: 12px;
+}
+
+#contacts{
+  font-size: 12px;
+  font-weight: 200;
+}
+
+#logo2{
+  display: none;
+}
+
+#landmark{
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 5%
+}
+
+#l2{
+  margin-top: 10px;
+}
+
+#language{
+  position: fixed;
+  left: -5px;
+  bottom: 105px;
+  transform: rotate(-90deg) translate( -50%,0);
+  font-weight: 300;
+  font-size: 30px;
+}
+
+#fond{
+  position: absolute;
+  background: url(../img/portrait2.png) no-repeat center bottom;
+  background-size: 1300px;
+  height: 100%;
+  width: 100%;
+}
+
+#digitalToolbox{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(../img/digitalToolbox.png) no-repeat 30% 80%;
+  background-size: 400px;
+}
+
+
+#main{
+  position: fixed;
+  border: 2px solid black;
+  width: 90%;
+  margin-top: 90px;
+  margin-left: 7%;
+}
+
+#contentSkills{
+  xborder: 2px solid red;
+  width: 90%;
+  padding-top: 90px;
+  margin-left: 7%;
+}
+
+#skillsSkills, #projects{
+  display: inline-block;
+  vertical-align: top;
+}
+
+#skillsSkills{
+  margin-top: 20px;
+  margin-left: 20px;
+  xborder: 1px solid green;
+  position: absolute;
+}
+
+#skillsSkillsMask{
+  overflow: hidden;
+  width: 280px;
+  height: 180px;
+  xborder: 1px solid red;
+  position: absolute;
+}
+
+#projects{
+  width: 270px;
+  margin-top: 20px;
+  xborder: 1px solid pink;
+  position: absolute;
+  right: 50px;
+}
+
+#developer{
+  width: 160px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  color: #f1efe1;
+  font-size: 25px;
+  background-color: black;
+}
+#SEO{
+  width: 60px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  color: #f1efe1;
+  font-size: 25px;
+  background-color: black;
+}
+#webMarketer{
+  width: 215px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  color: #f1efe1;
+  font-size: 25px;
+  background-color: black;
+}
+#creative{
+  width: 130px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  color: #f1efe1;
+  font-size: 25px;
+  background-color: black;
+}
+#motionDesigner{
+  width: 250px;
+  padding-top: 4px;
+  padding-left: 10px;
+  padding-bottom: 3px;
+  color: #f1efe1;
+  font-size: 25px;
+  background-color: black;
+}
+
+#linkedin{
+  position: fixed;
+  right: 53px;
+  bottom: 30px;
+}
+
+#latestProjects{
+  background-color: black;
+  color: white;
+  width: 145px;
+  padding: 3px 5px 2px 5px;
+  margin-bottom: 5px;
+}
+
+.project1{
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+#lastProject{
+  border-bottom: none;
+}
+
+.imgProject, .textProject{
+  display: inline-block;
+}
+
+.textProject>p{
+  font-size: 11px;
+}
+
+#moreProjects{
+  text-align: right;
+  margin-right: 10px;
+}
+
+
+/*#######################################*/
+/*############## PORTFOLIO ##############*/
+/*#######################################*/
+
+#contentSkills, #portfolioWindow{
+  display: block;
+}
+
+#portfolioWindow{
+  xborder: 1px solid red;
+  width: 70%;
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.project2{
+  display: inline-block;
+  margin: 15px;
+  width: 200px;
+  background-color: black;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.07);
+  border-radius: 3px 3px 2px 2px;
+}
+
+.project2 img{
+  width: 200px;
+}
+
+.contentsProject2{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.project2 p{
+  width: 150px;
+  color: white;
+  padding: 3px;
+  font-size: 12px;
+  margin-top: -2px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-weight: 100;
+}
+
+.infoTitleProjects{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+}
+
+.project2>img{
+  border-radius: 2px 2px 0px 0px;
+}
+
+
+/*#######################################*/
+/*############### FOOTER ################*/
+/*#######################################*/
+
+footer{
+  background-color: black;
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#seeYou{
+  vertical-align: middle;
+}
+
+#heart{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+}
+
+#contacts2{
+  display: none;
+}
+
+#linkedin2{
+  display: none;
+}
+
+/*########################################*/
+/*################ BURGER ################*/
+/*########################################*/
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.burger-menu {
+  position: absolute;
+  right: 20px;
+  top: 34px;
+  width: 140px;
+  height: 30px;
+  color: #60635E;
+  text-transform: uppercase;
+  z-index: 100;
+  display: none;
+
+  &.is-open {
+    z-index: 1010;
+  }
+}
+
+.burger-click-region {
+  position: fixed;
+  float: right;
+  right: 10px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+
+
+$menu-animation-duration: 400ms;
+$menu-animation-timing:   ease-out;
+
+.burger-menu-piece {
+  display: block;
+  position: absolute;
+  width: 40px;
+  border-top: 6px solid black;
+  transform-origin: 50% 50%;
+  transition: transform $menu-animation-duration $menu-animation-timing;
+
+  &:nth-child(1) {
+    top: 0;
+  }
+
+  &:nth-child(2) {
+    top: 12px;
+    opacity: 1;
+    transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+  }
+
+  &:nth-child(3) {
+    top: 24px;
+  }
+
+  .active & {
+
+      &:nth-child(1) {
+        animation: burger-open-top $menu-animation-duration $menu-animation-timing forwards;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+        transition: transform $menu-animation-duration $menu-animation-timing, opacity 0ms linear $menu-animation-duration / 2;
+      }
+
+      &:nth-child(3) {
+        animation: burger-open-bot $menu-animation-duration $menu-animation-timing forwards;
+      }
+  }
+
+  .closing & {
+    &:nth-child(1) {
+      animation: burger-close-top $menu-animation-duration $menu-animation-timing forwards;
+    }
+
+    &:nth-child(3) {
+      animation: burger-close-bot $menu-animation-duration $menu-animation-timing forwards;
+    }
+  }
+}
+
+@keyframes burger-open-top {
+  50% {
+    transform: translate3d(0, 12px, 0);
+  }
+  100% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+}
+
+@keyframes burger-open-bot {
+  50% {
+    transform: translate3d(0, -12px, 0);
+  }
+  100% {
+    transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+}
+
+@keyframes burger-close-top {
+  0% {
+    transform: translate3d(0, 12px, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes burger-close-bot {
+  0% {
+    transform: translate3d(0, -12px, 0) rotate(-45deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.ks-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1.0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 11;
+  transition: opacity 500ms ease-out, visibility 0 linear 500ms;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 500ms ease-out, visibility 0 linear 0;
+  }
+}
+
+.ks-modal-contents {
+  display: none;
+}
+
+.site-nav-list {
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    $menu-item-1-delay: 140ms;
+    $menu-item-2-delay: 100ms;
+    $menu-item-3-delay: 70ms;
+    $menu-item-4-delay: 50ms;
+
+    margin: 20px 0;
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+
+    &:nth-child(1) {
+      transition: opacity 250ms ease-out $menu-item-1-delay, transform 250ms ease-in $menu-item-1-delay;
+    }
+
+    &:nth-child(2) {
+      transition: opacity 250ms ease-out $menu-item-2-delay, transform 250ms ease-in $menu-item-2-delay;
+    }
+
+    &:nth-child(3) {
+      transition: opacity 250ms ease-out $menu-item-3-delay, transform 250ms ease-in $menu-item-3-delay;
+    }
+
+    &:nth-child(4) {
+      transition: opacity 500ms ease-out $menu-item-4-delay, transform 400ms ease-out $menu-item-4-delay;
+    }
+  }
+
+  li a {
+    display: block;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    transition: color 200ms ease-in;
+
+    &:hover {
+      color: magenta;
+    }
+  }
+}
+
+#download3{
+  text-align: center;
+}
+
+.ks-modal.open {
+  .site-nav-list li {
+    $menu-item-1-delay: 250ms;
+    $menu-item-2-delay: 270ms;
+    $menu-item-3-delay: 300ms;
+    $menu-item-4-delay: 340ms;
+
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+
+    &:nth-child(1) {
+      transition: opacity 500ms ease-out $menu-item-1-delay, transform 400ms ease-out $menu-item-1-delay;
+    }
+
+    &:nth-child(2) {
+      transition: opacity 500ms ease-out $menu-item-2-delay, transform 400ms ease-out $menu-item-2-delay;
+    }
+
+    &:nth-child(3) {
+      transition: opacity 500ms ease-out $menu-item-3-delay, transform 400ms ease-out $menu-item-3-delay;
+    }
+
+    &:nth-child(4) {
+      transition: opacity 500ms ease-out $menu-item-4-delay, transform 400ms ease-out $menu-item-4-delay;
+    }
+  }
+}
+
+
+/*########################################*/
+/*#############             ##############*/
+/*############ MEDIA QUERIES #############*/
+/*#############             ##############*/
+/*########################################*/
+
+@media (max-width: 700px){
+  #projects{
+    display: none;
+  }
+
+  #burger-menu{
+    display: block;
+  }
+
+  header{
+    width: 100%;
+    position: fixed;
+    padding: 10px;
+    margin-left: 0px;
+    z-index: 10;
+    background-color: black;
+    color: white;
+    border-bottom: 4px solid white;
+  }
+
+  #logo{
+    display: none;
+  }
+
+  #logo2{
+    width: 100px;
+  }
+
+  #logo2, #presentation, nav{
+    display: inline-block;
+  }
+
+  nav{
+    display: none;
+  }
+
+  .burger-menu-piece{
+    border-top: 4px solid white;
+  }
+
+  #fond{
+    background-size: 180%;
+  }
+
+  #digitalToolbox{
+    background: url(../img/digitalToolbox.png) no-repeat 30% 100%;
+    background-size: 350px;
+  }
+
+  #main{
+    display: none;
+  }
+
+  #landmark{
+    display: none;
+  }
+
+  #language{
+    display: none;
+  }
+
+  #linkedin{
+    right: 20px;
+    bottom: 15px;
+  }
+
+  #contentSkills{
+    width: 100%;
+    padding-top: 90px;
+    margin-left: 0px;
+  }
+
+  #portfolioWindow{
+    width: 100%;
+  }
+
+  #contacts2{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    line-height: normal;
+    margin-top: 0px;
+  }
+
+  #linkedin2{
+    display: block;
+    line-height: normal;
+    text-align: right;
+    margin-right: 20px;
+  }
+
+}
+
+@media (max-width: 470px){
+
+  header{
+    padding-bottom: 3px;
+  }
+
+  #logo2{
+    width: 60px;
+  }
+
+  #presentation{
+    height: 45px;
+  }
+
+  #presentation h2{
+    margin-top: 3px;
+    font-size: 16px;
+  }
+
+  #presentation p{
+    font-size: 16px;
+  }
+
+  #contacts{
+    display: none;
+  }
+
+  .burger-click-region{
+    top: 18px;
+  }
+
+  #fond{
+    background-size: 850px;
+  }
+
+  #digitalToolbox{
+    background: url(../img/digitalToolbox.png) no-repeat 30% 105%;
+    background-size: 300px;
+  }
+
+  #language{
+    display: none;
+  }
+
+  #linkedin{
+    display: none;
+  }
+
+  #skillsSkillsMask{
+    overflow: visible;
+  }
+
+  #skillsSkills{
+    margin-top: -10px;
+  }
+
+  #portfolioWindow{
+    text-align: left;
+  }
+
+  .project2{
+    width: 100%;
+    margin: 8px 0px 8px 0px;
+    display: inline-block;
+    background-color: black;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.07);
+    border-radius: 0px 0px 0px 0px;
+  }
+
+  .project2 img, .contentsProject2{
+    border-radius: 0px;
+  }
+
+  .project2 img{
+    width: 100%;
+  }
+
+  .contentsProject2{
+    vertical-align: top;
+    width: 100%;
+  }
+
+  .contentsProject2 p{
+    width: 94%;
+  }
+
+}
+
+@media (max-height: 620px){
+  .project1:nth-child(5){
+    display: none;
+  }
+}
+
+@media (max-height: 550px){
+  .project1:nth-child(4){
+    display: none;
+  }
+}
+
+@media (max-height: 480px){
+  .project1:nth-child(3){
+    display: none;
+  }
+
+  #fond{
+    background: url(../img/portrait2.png) no-repeat center;
+    background-size: 1300px;
+  }
+
+  #digitalToolbox{
+    display: none;
+  }
+}
+
+@media (max-height: 410px){
+  .project1:nth-child(2){
+    display: none;
+  }
+}
