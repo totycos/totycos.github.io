@@ -662,6 +662,12 @@ h3 {
   opacity: 100%;
 }
 
+.flex-item.active>.hover-flex-item {
+  animation-name: anime1-in;
+  animation-duration: 0.4s;
+  opacity: 100%;
+}
+
 @keyframes anime1-in {
   0% {
     opacity: 0%;

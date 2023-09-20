@@ -489,6 +489,20 @@ for (let unity = 1; unity< projectAmount+1; unity++) {
 
 
 ///////////////////////////////////////////////
+////////// HOVER ON PORTFOLIO ITEMS ///////////
+///////////////////////////////////////////////
+
+document.querySelectorAll('.flex-item').forEach(item => {
+  item.addEventListener('touchstart', function() {
+    this.classList.add('active');
+  });
+  item.addEventListener('touchend', function() {
+    this.classList.remove('active');
+  });
+});
+
+
+///////////////////////////////////////////////
 ///////////////////// LOADER //////////////////
 ///////////////////////////////////////////////
 document.onreadystatechange = function () {
