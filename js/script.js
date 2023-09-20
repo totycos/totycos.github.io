@@ -292,15 +292,106 @@ var menuModal = new KS_Modal('#burger-menu', '#site-menu-contents', '#burger-cli
 ///////////////////////////////////////////////
 var portfolio = [
   {
-   "title" : "WEB APP DEVELOPMENT",
+    "title" : "WEB APP",
+    "client" : "localchat.fly.dev",
+    "description" : "Developed and deployed location-based chat platform.",
+    "hashtags" : '#RubyOnRails #Hotwire #MapBox #Fly.io',
+    "picture" : "img/mockup-localchat.gif",
+    "plus" : "visit the website"
+   }, 
+  {
+   "title" : "WEB APP",
    "client" : "quickteach.co",
-   "description" : "Full stack développement et mise en ligne d’un site de formation intégrant un système d’inscription/ authentification et de paiement Stripe. Projet incluant aussi des vidéos explicatives en motion design.",
-   "hashtags" : '#RubyOnRails #Stripe #Illustrator #AfterEffect #Heroku #CloudFlare #DNS #FacebookAds',
+   "description" : "Created e-learning site with registration, authentication, and Stripe payment.",
+   "hashtags" : '#RubyOnRails #Stripe #Illustrator #AfterEffect #Fly.io #CloudFlare #DNS #FacebookAds',
+   "picture" : "img/mockup-quickteach11.gif",
+   "plus" : "visit the website"
+  },
+  {
+    "title" : "WEB SITE",
+    "client" : "juliette-shiatsu.fr",
+    "description" : "Developed and deployed showcase website for Shiatsu practitioner.",
+    "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
+    "picture" : "img/mockup-juliette11.jpg",
+    "plus" : "visit the website"
+  },  
+  {
+    "title" : "WEB SITE", 
+    "client" : "rycaal.com",
+    "description" : "Developed and deployed showcase website for a consulting company.",
+    "hashtags" : "#HTML5 #CSS3 #Bootstrap",
+    "picture" : "img/mockup-rycaal11.jpg",
+    "plus" : "visit the website"
+  },  
+  {
+    "title" : "WEB SITE", 
+    "client" : "thefarm.surge.sh",
+    "description" : "Developed website for a campground & events venue.",
+    "hashtags" : "#HTML5 #CSS3 #jQuery",
+    "picture" : "img/mockup-thefarm.jpg",
+    "plus" : "visit the website"
+  },  
+  {
+    "title" : "MOTION DESIGN",
+    "client" : "Société Générale", 
+    "description" : "Produced internal communication video for large bank.",
+    "hashtags" : "#Illustrator #AfterEffect #AdobeAudition",
+    "picture" : "img/nowFellows.png",
+    "plus" : "watch the video"
+  },  
+  {
+    "title" : "FLYERS TRIPTYQUES", 
+    "client" : "Société Générale", 
+    "description" : "Designed informational brochures for bank's internal use.",
+    "hashtags" : "#Illustrator #InDesign",
+    "picture" : "img/mockup-triptyque11.jpg",
+    "plus" : " - "
+  },
+  {
+    "title" : "WEB SITE",
+    "client" : "novateurcoaching.com",
+    "description" : "Developed and deployed coaching website.",
+    "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
+    "picture" : "img/mockup-novateur11.jpg",
+    "plus" : "visit the website"
+  }, 
+  {
+    "title" : "WEB SITE",
+    "client" : "humanevent.fr",
+    "description" : "Developed and deployed site for humanitarian organization.",
+    "hashtags" : "#HTML5 #CSS3",
+    "picture" : "img/mockup-human21.jpg",
+    "plus" : "visit the website"
+  }, 
+  {
+    "title" : "MOTION DESIGN",
+    "client" : "Projet perso", 
+    "description" : "Crafted cartoon-style design and sound design.",
+    "hashtags" : "#Illustrator #AfterEffect",
+    "picture" : "img/nowFellows.png",
+    "plus" : "watch the video"
+  },       
+];
+
+var portfolio_fr = [
+  {
+    "title" : "WEB APP",
+    "client" : "localchat.fly.dev",
+    "description" : "Full stack développement et mise en ligne d’une plateforme de chat avec les utilisateurs géolocalisées autour de soi.",
+    "hashtags" : '#RubyOnRails #Hotwire #MapBox #Fly.io',
+    "picture" : "img/mockup-localchat.gif",
+    "plus" : "visiter le site"
+   },
+  {
+   "title" : "WEB APP",
+   "client" : "quickteach.co",
+   "description" : "Full stack développement et mise en ligne d’un site de formation intégrant un système d’inscription/authentification et de paiement Stripe.",
+   "hashtags" : '#RubyOnRails #Stripe #Illustrator #AfterEffect #Fly.io #CloudFlare #DNS #FacebookAds',
    "picture" : "img/mockup-quickteach11.gif",
    "plus" : "visiter le site"
   },
   {
-    "title" : "WEB SITE DEVELOPMENT",
+    "title" : "WEB SITE",
     "client" : "juliette-shiatsu.fr",
     "description" : "Développement et mise en ligne d’un site vitrine pour une praticienne de Shiatsu.",
     "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
@@ -308,7 +399,7 @@ var portfolio = [
     "plus" : "visiter le site"
   },  
   {
-    "title" : "WEB SITE DEVELOPMENT", 
+    "title" : "WEB SITE", 
     "client" : "rycaal.com",
     "description" : "Développement et mise en ligne d’un site vitrine pour une société de conseil.",
     "hashtags" : "#HTML5 #CSS3 # #Bootstrap",
@@ -332,7 +423,7 @@ var portfolio = [
     "plus" : "voir les flyers"
   },
   {
-    "title" : "WEB SITE DEVELOPMENT",
+    "title" : "WEB SITE",
     "client" : "novateurcoaching.com",
     "description" : "Développement et mise en ligne d’un site vitrine de coaching.",
     "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
@@ -340,7 +431,7 @@ var portfolio = [
     "plus" : "visiter le site"
   }, 
   {
-    "title" : "WEB SITE DEVELOPMENT",
+    "title" : "WEB SITE",
     "client" : "humanevent.fr",
     "description" : "Développement et mise en ligne d’un site pour une association humanitaire.",
     "hashtags" : "#HTML5 #CSS3",
@@ -509,7 +600,7 @@ document.onreadystatechange = function () {
         
 
        
-      },6000);
+      },1000);
    
       
   }

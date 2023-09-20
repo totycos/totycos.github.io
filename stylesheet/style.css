@@ -251,7 +251,7 @@ nav {
 #skillsSkillsMask {
   overflow: hidden;
   width: 400px;
-  height: 180px;
+  height: inherit;
   position: absolute;
 }
 
@@ -282,7 +282,7 @@ nav {
 .developer-info p {
   width: 300px;
 }
-
+/*
 .container-developer:hover .developer-info {
   
   animation: 0.6s ease-out 0.5s forwards anime-skills-in;
@@ -318,7 +318,7 @@ nav {
     padding: 0px;
   }
 }
-
+*/
 
 #projects {
   width: 270px;
@@ -552,7 +552,7 @@ nav {
 }
 
 #portfolio2 {
-  padding: 100px 20px 100px 20px;
+  padding: 100px 20px 50px 20px;
   pointer-events: none;
 }
 
@@ -584,7 +584,6 @@ h3 {
 
 .title-baseline p {
   display: inline-block;
-  float: right;
 }
 
 @keyframes defilement-rtl {
@@ -752,14 +751,19 @@ h3 {
 
 .description {
   margin-bottom: 20px;
-  text-align: justify;
+  text-align: center;
+  hyphens: border-box;
+  -ms-hyphens: border-box; /* IE */
+  -moz-hyphens: border-box; /* Firefox */
+  -webkit-hyphens: border-box; /* Safari */
   padding: 0px 5px;
 }
 
 .description span {
   font-weight: 500;
-  line-height: 17px;
+  line-height: 21px;
   background-color: black;
+  /* word-break: break-all; */
 }
 
 .infoResumeProjects {
@@ -774,7 +778,7 @@ h3 {
   flex-grow: 4;
   font-weight: 800 !important;
   background-color: black;
-  text-align: left;
+  text-align: center;
   padding: 0px 5px;
 }
 
@@ -872,6 +876,12 @@ h3 {
 /*################ CONTACT ##############*/
 /*#######################################*/
 
+#contact-section-container {
+  padding-bottom: 14px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
 #contact-container {
   width: 98%;
   margin: auto;
@@ -918,7 +928,7 @@ h3 {
 .title-info {
   font-size: 24px;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 
@@ -935,7 +945,7 @@ h3 {
 }
 
 #contact-img {
-  background-image: url(../img/melbourne.jpg);
+  background-image: url(../img/paris.jpg);
   width: 37%;
   min-width: 300px;
   height: auto;
@@ -966,10 +976,15 @@ h3 {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   z-index: 2;
+  line-height: 48px
+}
+
+#button-linkedin>p> {
+  text-align: center;
 }
 
 #button-linkedin>p>svg {
-  vertical-align: sub;
+  vertical-align: text-bottom;
 }
 
 
@@ -1256,7 +1271,7 @@ body {
 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
   .flex-item {
     max-width: calc(50% - 36px);
@@ -1374,7 +1389,7 @@ body {
   }
 
   #portfolio2 {
-    padding: 100px 0px 100px 0px;
+    padding: 100px 0px 50px 0px;
   }
 
   #flex-container {
