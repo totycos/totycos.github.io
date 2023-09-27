@@ -29,6 +29,125 @@ for (var i = 0; i < elementToDot.length; ++i) {
 }
 
 
+///////////////////////////////////////////////
+///////////////////// LOADER //////////////////
+///////////////////////////////////////////////
+document.onreadystatechange = function () {
+  var state = document.readyState
+  if (state == 'interactive') {
+       document.getElementById('contents').style.visibility="hidden";
+
+            $( "#fond" ).mgGlitch({
+        destroy : false, // set 'true' to stop the plugin
+                          glitch: true, // set 'false' to stop glitching
+                          scale: true, // set 'false' to stop scaling
+                          blend : false, // set 'false' to stop glitch blending
+                          blendModeType : 'hue', // select blend mode type
+                          glitch1TimeMin : 3000, // set min time for glitch 1 elem
+                          glitch1TimeMax : 4500, // set max time for glitch 1 elem
+                          glitch2TimeMin : 50, // set min time for glitch 2 elem
+                          glitch2TimeMax : 500, // set max time for glitch 2 elem
+                          zIndexStart : 4, // because of absolute position, set z-index base value
+      });
+
+      $( "#main" ).mgGlitch({
+        destroy : false, // set 'true' to stop the plugin
+                          glitch: true, // set 'false' to stop glitching
+                          scale: false, // set 'false' to stop scaling
+                          blend : false, // set 'false' to stop glitch blending
+                          blendModeType : 'hue', // select blend mode type
+                          glitch1TimeMin : 6000, // set min time for glitch 1 elem
+                          glitch1TimeMax : 9000, // set max time for glitch 1 elem
+                          glitch2TimeMin : 100, // set min time for glitch 2 elem
+                          glitch2TimeMax : 1000, // set max time for glitch 2 elem
+                          zIndexStart : 1, // because of absolute position, set z-index base value
+      });
+
+      $( "#loader-loading" ).mgGlitch({
+        destroy : false, // set 'true' to stop the plugin
+                          glitch: true, // set 'false' to stop glitching
+                          scale: true, // set 'false' to stop scaling
+                          blend : false, // set 'false' to stop glitch blending
+                          blendModeType : 'overlay', // select blend mode type
+                          glitch1TimeMin : 3000, // set min time for glitch 1 elem
+                          glitch1TimeMax : 4500, // set max time for glitch 1 elem
+                          glitch2TimeMin : 50, // set min time for glitch 2 elem
+                          glitch2TimeMax : 500, // set max time for glitch 2 elem
+                          zIndexStart : 9, // because of absolute position, set z-index base value
+      });
+
+      $( ".hover-flex-item" ).mgGlitch({
+        destroy : false, // set 'true' to stop the plugin
+                          glitch: true, // set 'false' to stop glitching
+                          scale: true, // set 'false' to stop scaling
+                          blend : false, // set 'false' to stop glitch blending
+                          blendModeType : 'overlay', // select blend mode type
+                          glitch1TimeMin : 6000, // set min time for glitch 1 elem
+                          glitch1TimeMax : 9000, // set max time for glitch 1 elem
+                          glitch2TimeMin : 100, // set min time for glitch 2 elem
+                          glitch2TimeMax : 100, // set max time for glitch 2 elem
+                          zIndexStart : 9, // because of absolute position, set z-index base value
+      });
+
+    
+
+  } else if (state == 'complete') {
+      setTimeout(function(){
+
+         document.getElementById('interactive');
+         document.getElementById('loader').style.visibility="hidden";
+         document.getElementById('contents').style.visibility="visible";
+         $(window).scrollTop(5);
+         $( "#fond2" ).css("margin-left", "40%");
+         $( "#digitalToolbox" ).css("margin-left", "-1000px");
+         
+          $( "#projects" ).css("display", "none");
+         
+         $( "#skillsSkills" ).css("margin-top", "200px");
+      
+         
+         animeHomeIn();
+         
+
+         setTimeout(function(){
+            $( "#fond2" ).mgGlitch({
+              destroy : false, // set 'true' to stop the plugin
+                                glitch: true, // set 'false' to stop glitching
+                                scale: false, // set 'false' to stop scaling
+                                blend : false, // set 'false' to stop glitch blending
+                                blendModeType : 'hue', // select blend mode type
+                                glitch1TimeMin : 6000, // set min time for glitch 1 elem
+                                glitch1TimeMax : 9000, // set max time for glitch 1 elem
+                                glitch2TimeMin : 100, // set min time for glitch 2 elem
+                                glitch2TimeMax : 1000, // set max time for glitch 2 elem
+                                zIndexStart : 1, // because of absolute position, set z-index base value
+            });
+          },1000);
+
+       
+
+        $( "#main2" ).mgGlitch({
+          destroy : false, // set 'true' to stop the plugin
+                            glitch: true, // set 'false' to stop glitching
+                            scale: false, // set 'false' to stop scaling
+                            blend : false, // set 'false' to stop glitch blending
+                            blendModeType : 'hue', // select blend mode type
+                            glitch1TimeMin : 6000, // set min time for glitch 1 elem
+                            glitch1TimeMax : 9000, // set max time for glitch 1 elem
+                            glitch2TimeMin : 100, // set min time for glitch 2 elem
+                            glitch2TimeMax : 1000, // set max time for glitch 2 elem
+                            zIndexStart : 0, // because of absolute position, set z-index base value
+        });
+        
+
+       
+      },1000);
+   
+      
+  }
+}
+
+
 
 ////////////////////////////////////////////////////////////////////////
 //////////////////// ANIME ELEMENTS HOME ///////////////////////////////
@@ -288,7 +407,7 @@ var menuModal = new KS_Modal('#burger-menu', '#site-menu-contents', '#burger-cli
 
 
 ///////////////////////////////////////////////
-///////////////// DATA PORTFOLIO //////////////
+//////////// DATA PORTFOLIO ENGLISH ///////////
 ///////////////////////////////////////////////
 var portfolio = [
   {
@@ -365,89 +484,13 @@ var portfolio = [
   }, 
   {
     "title" : "MOTION DESIGN",
-    "client" : "Projet perso", 
+    "client" : "Personal project", 
     "description" : "Crafted cartoon-style design and sound design.",
     "hashtags" : "#Illustrator #AfterEffect",
     "picture" : "img/nowFellows.png",
     "plus" : "watch the video"
   },       
 ];
-
-var portfolio_fr = [
-  {
-    "title" : "WEB APP",
-    "client" : "localchat.fly.dev",
-    "description" : "Full stack développement et mise en ligne d’une plateforme de chat avec les utilisateurs géolocalisées autour de soi.",
-    "hashtags" : '#RubyOnRails #Hotwire #MapBox #Fly.io',
-    "picture" : "img/mockup-localchat.gif",
-    "plus" : "visiter le site"
-   },
-  {
-   "title" : "WEB APP",
-   "client" : "quickteach.co",
-   "description" : "Full stack développement et mise en ligne d’un site de formation intégrant un système d’inscription/authentification et de paiement Stripe.",
-   "hashtags" : '#RubyOnRails #Stripe #Illustrator #AfterEffect #Fly.io #CloudFlare #DNS #FacebookAds',
-   "picture" : "img/mockup-quickteach11.gif",
-   "plus" : "visiter le site"
-  },
-  {
-    "title" : "WEB SITE",
-    "client" : "juliette-shiatsu.fr",
-    "description" : "Développement et mise en ligne d’un site vitrine pour une praticienne de Shiatsu.",
-    "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
-    "picture" : "img/mockup-juliette11.jpg",
-    "plus" : "visiter le site"
-  },  
-  {
-    "title" : "WEB SITE", 
-    "client" : "rycaal.com",
-    "description" : "Développement et mise en ligne d’un site vitrine pour une société de conseil.",
-    "hashtags" : "#HTML5 #CSS3 # #Bootstrap",
-    "picture" : "img/mockup-rycaal11.jpg",
-    "plus" : "visiter le site"
-  },  
-  {
-    "title" : "VIDEO MOTION DESIGN",
-    "client" : "Société Générale", 
-    "description" : "Vidéo explicative dédiée à de la communication interne au sein d’un grand groupe bancaire.",
-    "hashtags" : "#Illustrator #AfterEffect #AdobeAudition",
-    "picture" : "img/nowFellows.png",
-    "plus" : "voir la video"
-  },  
-  {
-    "title" : "FLYERS TRIPTYQUES", 
-    "client" : "Société Générale", 
-    "description" : "Dépliants explicatifs dédiés à de la communication interne au sein d’un grand groupe bancaire.",
-    "hashtags" : "#Illustrator #InDesign",
-    "picture" : "img/mockup-triptyque11.jpg",
-    "plus" : "voir les flyers"
-  },
-  {
-    "title" : "WEB SITE",
-    "client" : "novateurcoaching.com",
-    "description" : "Développement et mise en ligne d’un site vitrine de coaching.",
-    "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
-    "picture" : "img/mockup-novateur11.jpg",
-    "plus" : "visiter le site"
-  }, 
-  {
-    "title" : "WEB SITE",
-    "client" : "humanevent.fr",
-    "description" : "Développement et mise en ligne d’un site pour une association humanitaire.",
-    "hashtags" : "#HTML5 #CSS3",
-    "picture" : "img/mockup-human21.jpg",
-    "plus" : "visiter le site"
-  }, 
-  {
-    "title" : "VIDEO MOTION DESIGN",
-    "client" : "Projet perso", 
-    "description" : "Travail de création et d'animation d'un design de type cartoon et de son sound design.",
-    "hashtags" : "#Illustrator #AfterEffect",
-    "picture" : "img/nowFellows.png",
-    "plus" : "voir la video"
-  },       
-];
-
 
 var projectAmount = portfolio.length
 
@@ -489,6 +532,131 @@ for (let unity = 1; unity< projectAmount+1; unity++) {
 
 
 ///////////////////////////////////////////////
+//////////// DATA PORTFOLIO FRENCH ////////////
+///////////////////////////////////////////////
+
+var portfolio_fr = [
+  {
+    "title" : "APPLICATION WEB",
+    "client" : "localchat.fly.dev",
+    "description" : "Développement et déploiement d'une plateforme de chat basée sur la localisation.",
+    "hashtags" : '#RubyOnRails #Hotwire #MapBox #Fly.io',
+    "picture" : "img/mockup-localchat.gif",
+    "plus" : "visiter le site"
+  }, 
+  {
+    "title" : "APPLICATION WEB",
+    "client" : "quickteach.co",
+    "description" : "Création d'un site de formation en ligne avec inscription, authentification et paiement Stripe.",
+    "hashtags" : '#RubyOnRails #Stripe #Illustrator #AfterEffect #Fly.io #CloudFlare #DNS #FacebookAds',
+    "picture" : "img/mockup-quickteach11.gif",
+    "plus" : "visiter le site"
+  },
+  {
+    "title" : "SITE WEB",
+    "client" : "juliette-shiatsu.fr",
+    "description" : "Développement et déploiement d'un site vitrine pour une praticienne de Shiatsu.",
+    "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
+    "picture" : "img/mockup-juliette11.jpg",
+    "plus" : "visiter le site"
+  },  
+  {
+    "title" : "SITE WEB", 
+    "client" : "rycaal.com",
+    "description" : "Développement et déploiement un site vitrine pour une société de conseil.",
+    "hashtags" : "#HTML5 #CSS3 #Bootstrap",
+    "picture" : "img/mockup-rycaal11.jpg",
+    "plus" : "visiter le site"
+  },  
+  {
+    "title" : "SITE WEB", 
+    "client" : "thefarm.surge.sh",
+    "description" : "Développement d'un site pour une ferme proposant diverses activités",
+    "hashtags" : "#HTML5 #CSS3 #jQuery",
+    "picture" : "img/mockup-thefarm.jpg",
+    "plus" : "visiter le site"
+  },  
+  {
+    "title" : "MOTION DESIGN",
+    "client" : "Société Générale", 
+    "description" : "Réalisation d'une vidéo de communication interne pour une grande banque.",
+    "hashtags" : "#Illustrator #AfterEffect #AdobeAudition",
+    "picture" : "img/nowFellows.png",
+    "plus" : "regarder la vidéo"
+  },  
+  {
+    "title" : "TRIPTYQUES DE FLYERS", 
+    "client" : "Société Générale", 
+    "description" : "Conception de brochures d'information à usage interne pour une banque.",
+    "hashtags" : "#Illustrator #InDesign",
+    "picture" : "img/mockup-triptyque11.jpg",
+    "plus" : " - "
+  },
+  {
+    "title" : "SITE WEB",
+    "client" : "novateurcoaching.com",
+    "description" : "Développement et déploiement d'un site de coaching.",
+    "hashtags" : "#HTML5 #CSS3 #jQuery #Bootstrap #SEO",
+    "picture" : "img/mockup-novateur11.jpg",
+    "plus" : "visiter le site"
+  }, 
+  {
+    "title" : "SITE WEB",
+    "client" : "humanevent.fr",
+    "description" : "Développement et déploiement d'un site pour une organisation humanitaire.",
+    "hashtags" : "#HTML5 #CSS3",
+    "picture" : "img/mockup-human21.jpg",
+    "plus" : "visiter le site"
+  }, 
+  {
+    "title" : "MOTION DESIGN",
+    "client" : "Projet perso", 
+    "description" : "Conception d'une animation en motion design.",
+    "hashtags" : "#Illustrator #AfterEffect",
+    "picture" : "img/nowFellows.png",
+    "plus" : "regarder la vidéo"
+  },       
+];
+
+var projectAmount = portfolio_fr.length
+
+
+for (let unity = 1; unity< projectAmount+1; unity++) {
+ 
+  var titles = document.getElementsByClassName("title_vf"+unity);
+  console.log(unity)
+  Array.prototype.forEach.call(titles, function(x) {
+    x.innerHTML=portfolio_fr[unity-1]["title"]; 
+  });
+
+  var clients = document.getElementsByClassName("client_vf"+unity);
+  Array.prototype.forEach.call(clients, function(x) {
+    x.innerHTML=portfolio_fr[unity-1]["client"]; 
+  });
+
+  var descriptions = document.getElementsByClassName("description_vf"+unity);
+  Array.prototype.forEach.call(descriptions, function(x) {
+    x.innerHTML=portfolio_fr[unity-1]["description"]; 
+  });
+
+  var hashtags = document.getElementsByClassName("hashtag_vf"+unity);
+  Array.prototype.forEach.call(hashtags, function(x) {
+    x.innerHTML=portfolio_fr[unity-1]["hashtags"]; 
+  });
+
+  var pluss = document.getElementsByClassName("plus_vf"+unity);
+  Array.prototype.forEach.call(pluss, function(x) {
+    x.innerHTML=portfolio_fr[unity-1]["plus"];
+  });
+
+  var pictures = document.getElementsByClassName("picture_vf"+unity);
+  Array.prototype.forEach.call(pictures, function(x) {
+    x.src=portfolio_fr[unity-1]["picture"]; 
+  });
+
+}
+
+///////////////////////////////////////////////
 ////////// HOVER ON PORTFOLIO ITEMS ///////////
 ///////////////////////////////////////////////
 
@@ -500,125 +668,6 @@ document.querySelectorAll('.flex-item').forEach(item => {
     this.classList.remove('active');
   });
 });
-
-
-///////////////////////////////////////////////
-///////////////////// LOADER //////////////////
-///////////////////////////////////////////////
-document.onreadystatechange = function () {
-  var state = document.readyState
-  if (state == 'interactive') {
-       document.getElementById('contents').style.visibility="hidden";
-
-            $( "#fond" ).mgGlitch({
-        destroy : false, // set 'true' to stop the plugin
-                          glitch: true, // set 'false' to stop glitching
-                          scale: true, // set 'false' to stop scaling
-                          blend : false, // set 'false' to stop glitch blending
-                          blendModeType : 'hue', // select blend mode type
-                          glitch1TimeMin : 3000, // set min time for glitch 1 elem
-                          glitch1TimeMax : 4500, // set max time for glitch 1 elem
-                          glitch2TimeMin : 50, // set min time for glitch 2 elem
-                          glitch2TimeMax : 500, // set max time for glitch 2 elem
-                          zIndexStart : 4, // because of absolute position, set z-index base value
-      });
-
-      $( "#main" ).mgGlitch({
-        destroy : false, // set 'true' to stop the plugin
-                          glitch: true, // set 'false' to stop glitching
-                          scale: false, // set 'false' to stop scaling
-                          blend : false, // set 'false' to stop glitch blending
-                          blendModeType : 'hue', // select blend mode type
-                          glitch1TimeMin : 6000, // set min time for glitch 1 elem
-                          glitch1TimeMax : 9000, // set max time for glitch 1 elem
-                          glitch2TimeMin : 100, // set min time for glitch 2 elem
-                          glitch2TimeMax : 1000, // set max time for glitch 2 elem
-                          zIndexStart : 1, // because of absolute position, set z-index base value
-      });
-
-      $( "#loader-loading" ).mgGlitch({
-        destroy : false, // set 'true' to stop the plugin
-                          glitch: true, // set 'false' to stop glitching
-                          scale: true, // set 'false' to stop scaling
-                          blend : false, // set 'false' to stop glitch blending
-                          blendModeType : 'overlay', // select blend mode type
-                          glitch1TimeMin : 3000, // set min time for glitch 1 elem
-                          glitch1TimeMax : 4500, // set max time for glitch 1 elem
-                          glitch2TimeMin : 50, // set min time for glitch 2 elem
-                          glitch2TimeMax : 500, // set max time for glitch 2 elem
-                          zIndexStart : 9, // because of absolute position, set z-index base value
-      });
-
-      $( ".hover-flex-item" ).mgGlitch({
-        destroy : false, // set 'true' to stop the plugin
-                          glitch: true, // set 'false' to stop glitching
-                          scale: true, // set 'false' to stop scaling
-                          blend : false, // set 'false' to stop glitch blending
-                          blendModeType : 'overlay', // select blend mode type
-                          glitch1TimeMin : 6000, // set min time for glitch 1 elem
-                          glitch1TimeMax : 9000, // set max time for glitch 1 elem
-                          glitch2TimeMin : 100, // set min time for glitch 2 elem
-                          glitch2TimeMax : 100, // set max time for glitch 2 elem
-                          zIndexStart : 9, // because of absolute position, set z-index base value
-      });
-
-    
-
-  } else if (state == 'complete') {
-      setTimeout(function(){
-
-         document.getElementById('interactive');
-         document.getElementById('loader').style.visibility="hidden";
-         document.getElementById('contents').style.visibility="visible";
-         $(window).scrollTop(5);
-         $( "#fond2" ).css("margin-left", "40%");
-         $( "#digitalToolbox" ).css("margin-left", "-1000px");
-         
-          $( "#projects" ).css("display", "none");
-         
-         $( "#skillsSkills" ).css("margin-top", "200px");
-      
-         
-         animeHomeIn();
-         
-
-         setTimeout(function(){
-            $( "#fond2" ).mgGlitch({
-              destroy : false, // set 'true' to stop the plugin
-                                glitch: true, // set 'false' to stop glitching
-                                scale: false, // set 'false' to stop scaling
-                                blend : false, // set 'false' to stop glitch blending
-                                blendModeType : 'hue', // select blend mode type
-                                glitch1TimeMin : 6000, // set min time for glitch 1 elem
-                                glitch1TimeMax : 9000, // set max time for glitch 1 elem
-                                glitch2TimeMin : 100, // set min time for glitch 2 elem
-                                glitch2TimeMax : 1000, // set max time for glitch 2 elem
-                                zIndexStart : 1, // because of absolute position, set z-index base value
-            });
-          },1000);
-
-       
-
-        $( "#main2" ).mgGlitch({
-          destroy : false, // set 'true' to stop the plugin
-                            glitch: true, // set 'false' to stop glitching
-                            scale: false, // set 'false' to stop scaling
-                            blend : false, // set 'false' to stop glitch blending
-                            blendModeType : 'hue', // select blend mode type
-                            glitch1TimeMin : 6000, // set min time for glitch 1 elem
-                            glitch1TimeMax : 9000, // set max time for glitch 1 elem
-                            glitch2TimeMin : 100, // set min time for glitch 2 elem
-                            glitch2TimeMax : 1000, // set max time for glitch 2 elem
-                            zIndexStart : 0, // because of absolute position, set z-index base value
-        });
-        
-
-       
-      },1000);
-   
-      
-  }
-}
 
 
 
