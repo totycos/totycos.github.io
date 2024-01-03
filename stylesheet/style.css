@@ -643,14 +643,14 @@ h3 {
 
 .flex-item img {
   position: relative;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .flex-item video {
   position: relative;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .hover-flex-item {
@@ -1151,6 +1151,20 @@ body {
 
 .closing .burger-menu-piece:nth-child(3) {
   animation: burger-close-bot 400ms ease-out forwards;
+}
+
+.burger-flags {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.burger-flags > a {
+  margin: 0 10px;
+}
+
+.burger-flags > a > img {
+  width: 30px;
 }
 
 @keyframes burger-open-top {
