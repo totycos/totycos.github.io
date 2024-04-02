@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:200,300,400,500,600,700,800,900");
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap");
 
 a {
   text-decoration: none;
@@ -43,13 +43,14 @@ a {
 #loader-loading {
   font-weight: 700;
   font-size: 35vw;
-  margin-top: 1%;
   line-height: 28vw;
   margin-left: -30px;
   position: fixed;
   color: black;
   white-space: nowrap;
-
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 #glitch {
@@ -62,7 +63,7 @@ a {
   visibility: hidden;
 }
 
-#glitch>div {
+#glitch > div {
   width: fit-content;
   position: absolute;
   top: 50%;
@@ -71,7 +72,7 @@ a {
   margin-top: -67px;
 }
 
-#glitch>div>img {
+#glitch > div > img {
   width: 200px;
   opacity: 0.9;
 }
@@ -97,7 +98,7 @@ body,
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: #f1efe1;
 }
 
@@ -143,15 +144,15 @@ nav {
   margin-top: 3px;
 }
 
-#presentation>h2 {
+#presentation > h2 {
   font-size: 12px;
 }
 
-#presentation>p {
+#presentation > p {
   font-size: 12px;
 }
 
-#presentation>h2>span {
+#presentation > h2 > span {
   font-weight: 600;
 }
 
@@ -264,7 +265,7 @@ nav {
   width: 300px;
 }
 
-.container-developer p span{
+.container-developer p span {
   display: inline-block;
   font-size: 14px;
   vertical-align: bottom;
@@ -331,6 +332,12 @@ nav {
   position: absolute;
   right: 50px;
   z-index: 3;
+  background: rgb(241, 239, 225);
+  background: radial-gradient(
+    circle,
+    rgba(241, 239, 225, 0.387550850591716) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 #developer {
@@ -426,7 +433,7 @@ nav {
   animation-timing-function: ease-out;
 }
 
-.project1:hover>.imgProject {
+.project1:hover > .imgProject {
   filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
   animation-name: anime3-in;
   animation-duration: 1s;
@@ -489,7 +496,7 @@ nav {
 
 @keyframes anime3-out {
   from {
-    filter: drop-shadow(2px 4px 6px rgb(255, 255, 255))
+    filter: drop-shadow(2px 4px 6px rgb(255, 255, 255));
   }
 
   to {
@@ -515,11 +522,11 @@ nav {
   height: 66px;
 }
 
-.textProject>p {
+.textProject > p {
   font-size: 14px;
 }
 
-.textProject>p:first-child {
+.textProject > p:first-child {
   height: 15px;
   overflow: hidden;
   display: -webkit-box;
@@ -529,7 +536,7 @@ nav {
   margin-bottom: 2px;
 }
 
-.textProject>p:nth-child(2) {
+.textProject > p:nth-child(2) {
   height: 27px;
   overflow: hidden;
   display: -webkit-box;
@@ -538,7 +545,7 @@ nav {
   font-weight: 300;
 }
 
-.textProject>p:last-child {
+.textProject > p:last-child {
   height: 15px;
   overflow: hidden;
   display: -webkit-box;
@@ -548,7 +555,7 @@ nav {
   margin-top: 5px;
 }
 
-.textProject>p:last-child>svg {
+.textProject > p:last-child > svg {
   width: 1em;
   height: 1em;
 }
@@ -561,7 +568,6 @@ nav {
 /*#######################################*/
 /*############## PORTFOLIO ##############*/
 /*#######################################*/
-
 
 #contentSkills,
 #portfolioWindow {
@@ -632,7 +638,6 @@ h3 {
   pointer-events: visible;
 }
 
-
 .flex-item {
   max-width: calc(25% - 36px);
   position: relative;
@@ -668,7 +673,7 @@ h3 {
   /*animation-name: anime1-out;*/
   /*animation-duration: 1s;*/
   background-image: url("../img/glitch.png");
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 .infoTitleProjects {
@@ -682,13 +687,13 @@ h3 {
   text-align: center;
 }
 
-.flex-item:hover>.hover-flex-item {
+.flex-item:hover > .hover-flex-item {
   animation-name: anime1-in;
   animation-duration: 0.4s;
   opacity: 100%;
 }
 
-.flex-item.active>.hover-flex-item {
+.flex-item.active > .hover-flex-item {
   animation-name: anime1-in;
   animation-duration: 0.4s;
   opacity: 100%;
@@ -810,7 +815,7 @@ h3 {
   text-align: center;
 }
 
-.hashtag>span {
+.hashtag > span {
   flex-grow: 4;
   font-weight: 800 !important;
   background-color: black;
@@ -823,7 +828,7 @@ h3 {
   width: 1em;
   height: 0.8em;
   vertical-align: text-top;
-  color: #9fd9f5
+  color: #9fd9f5;
 }
 
 .plus {
@@ -844,7 +849,6 @@ h3 {
   /* la hauteur des spacers assurent le bon fonctionnement des transferts de sections */
   /*background-color: red; */
 }
-
 
 .popup-video {
   width: 100%;
@@ -873,7 +877,6 @@ h3 {
   z-index: 52;
 }
 
-
 .popup-bg-anime {
   animation-name: anime1-in;
   animation-duration: 0.4s;
@@ -885,7 +888,6 @@ h3 {
   display: block !important;
 }
 
-
 .cross {
   font-size: 40px;
   color: white;
@@ -894,20 +896,19 @@ h3 {
   position: absolute;
   background-color: black;
   padding: 12px;
-  font-family: 'Gemunu Libre', sans-serif;
+  font-family: "Gemunu Libre", sans-serif;
   font-weight: 700;
   cursor: pointer;
   z-index: 53;
 }
 
-.popup-bg>video {
+.popup-bg > video {
   width: 90%;
   min-width: 90%;
   min-height: auto;
   position: absolute;
   z-index: 101;
 }
-
 
 /*#######################################*/
 /*################ CONTACT ##############*/
@@ -927,7 +928,7 @@ h3 {
   pointer-events: all;
 }
 
-#contact-container>div {
+#contact-container > div {
   display: flex;
   flex-direction: row;
 }
@@ -960,7 +961,6 @@ h3 {
 #contact-baseline {
   margin-bottom: 0px !important;
 }
-
 
 .title-info {
   font-size: 24px;
@@ -1013,17 +1013,16 @@ h3 {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   z-index: 2;
-  line-height: 48px
+  line-height: 48px;
 }
 
-#button-linkedin>p> {
+#button-linkedin > p > {
   text-align: center;
 }
 
-#button-linkedin>p>svg {
+#button-linkedin > p > svg {
   vertical-align: text-bottom;
 }
-
 
 /*#######################################*/
 /*############### FOOTER ################*/
@@ -1065,7 +1064,7 @@ footer {
 }
 
 #heart {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 30px;
 }
 
@@ -1081,7 +1080,7 @@ footer {
 /*################ BURGER ################*/
 /*########################################*/
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .burger-menu {
@@ -1090,7 +1089,7 @@ body {
   top: 34px;
   width: 140px;
   height: 30px;
-  color: #60635E;
+  color: #60635e;
   text-transform: uppercase;
   z-index: 100;
   display: none;
@@ -1313,30 +1312,21 @@ body {
 /*#############             ##############*/
 /*########################################*/
 
-@media (max-width: 1200px) {
-
+@media (max-width: 1250px) {
   .flex-item {
     max-width: calc(33.3333% - 36px);
     flex: 1 0 calc(33.3333% - 36px);
   }
-
 }
 
-@media (max-width: 1000px) {
-
+@media (max-width: 960px) {
   .flex-item {
     max-width: calc(50% - 36px);
     flex: 1 0 calc(50% - 36px);
   }
-
 }
 
-@media (max-width: 700px) {
-
-  #loader-loading {
-    margin-top: 26%;
-  }
-
+@media (max-width: 650px) {
   #projects {
     display: none;
   }
@@ -1456,12 +1446,9 @@ body {
   #contact-text-container {
     padding: 40px 30px 58px 30px;
   }
-
 }
 
-
 @media (max-width: 600px) {
-
   .contentsProject2 {
     width: auto !important;
     color: white;
@@ -1475,7 +1462,7 @@ body {
     flex: 1 0 calc(100% - 36px);
   }
 
-  #contact-container>div {
+  #contact-container > div {
     flex-direction: column;
   }
 
@@ -1509,15 +1496,10 @@ body {
     width: 134px;
     margin-left: 55%;
   }
-
 }
 
-
-
 @media (max-width: 470px) {
-
   #loader-loading {
-    margin-top: 64%;
     font-size: 37vw;
     margin-left: -10px;
   }
@@ -1580,13 +1562,9 @@ body {
   #portfolioWindow {
     text-align: left;
   }
-
-
 }
 
-
 @media (max-width: 410px) {
-
   .project1:nth-child(2) {
     display: none;
   }
@@ -1624,11 +1602,7 @@ body {
       /* position finale à gauche */
     }
   }
-
 }
-
-
-
 
 @media (max-height: 620px) {
   .project1:nth-child(5) {
@@ -1657,6 +1631,5 @@ body {
     display: none;
   }
 }
-
 
 /*# sourceMappingURL=style.css.map */
