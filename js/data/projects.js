@@ -1,11 +1,21 @@
 export const portfolio_en = [
   {
     "title": "WEB APP",
-    "client": "mycomptafr.vercel.app",
-    "description": "Developed and deployed accounting app.",
+    "client": "mycompta-app.vercel.app",
+    "description": "Developed and deployed accounting SaaS.",
     "hashtags": "#ReactJS #TypeScript #Rails #Vercel #Fly.io",
     "picture": "img/mockup-mycompta.jpg",
-    "link": "https://mycomptafr.vercel.app/",
+    "link": "https://mycompta-app.vercel.app/",
+    "cta": "visit the website",
+    "type": "web"
+  },
+  {
+    "title": "WEB SITE",
+    "client": "igp-stguilhemledesert.fr",
+    "description": "Developed and deployed a winegrowers'union website.",
+    "hashtags": "#NextJS #ReactJS #TypeScript #Strapi #Vercel #Fly.io",
+    "picture": "img/mockup-stguilhem.jpg",
+    "link": "https://igp-stguilhemledesert.vercel.app/",
     "cta": "visit the website",
     "type": "web"
   },
@@ -25,7 +35,7 @@ export const portfolio_en = [
     "description": "Created e-learning site with Stripe payment.",
     "hashtags": "#RubyOnRails #Stripe #Illustrator #AfterEffect #Fly.io #CloudFlare #DNS #FacebookAds",
     "picture": "img/mockup-quickteach11.gif",
-    "link": "https://quickteach.fly.dev",
+    "link": "https://teachmeconcrete.com/",
     "cta": "visit the website",
     "type": "web"
   },
@@ -111,12 +121,22 @@ export const portfolio_en = [
 
 export const portfolio_fr = [
   {
-    "title": "WEB APP",
-    "client": "mycomptafr.vercel.app",
-    "description": "Développement et déploiement d'une app de comptabilité.",
+    "title": "APPLICATION WEB",
+    "client": "mycompta-app.vercel.app",
+    "description": "Développement et déploiement d'un Saas de comptabilité.",
     "hashtags": "#ReactJS #TypeScript #Rails #Vercel #Fly.io",
     "picture": "img/mockup-mycompta.jpg",
-    "link": "https://mycomptafr.vercel.app/",
+    "link": "https://mycompta-app.vercel.app/",
+    "cta": "visiter le site",
+    "type": "web"
+  },
+  {
+    "title": "WEB SITE",
+    "client": "igp-stguilhemledesert.fr",
+    "description": "Développement et déploiement d'un site de syndicat viticole.",
+    "hashtags": "#NextJS #ReactJS #TypeScript #Strapi #Vercel #Fly.io",
+    "picture": "img/mockup-stguilhem.jpg",
+    "link": "https://igp-stguilhemledesert.vercel.app/",
     "cta": "visiter le site",
     "type": "web"
   },
@@ -136,7 +156,7 @@ export const portfolio_fr = [
     "description": "Création d'un site de formation en ligne avec paiement Stripe.",
     "hashtags": '#RubyOnRails #Stripe #Illustrator #AfterEffect #Fly.io #CloudFlare #DNS #FacebookAds',
     "picture": "img/mockup-quickteach11.gif",
-    "link": "https://quickteach.fly.dev",
+    "link": "https://teachmeconcrete.com/",
     "cta": "visiter le site",
     "type": "web"
   },

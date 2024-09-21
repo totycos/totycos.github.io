@@ -9,11 +9,6 @@ function resize() {
   document.getElementById("main").style.height = heights - 114 + "px";
   document.getElementById("main2").style.height = heights - 114 + "px";
   document.getElementById("contentSkills").style.height = heights - 90 + "px";
-  //document.querySelector("footer").style.height = heights + "px";
-  //document.querySelector("footer").style.lineHeight = heights + "px";
-  document.getElementById("site-nav-list").style.top = heights / 2 - 130 + "px";
-  // document.getElementById("contacts2").style.marginTop = -heights/2 + 20 + "px";
-  //document.getElementById("linkedin2").style.marginTop = heights/3 - 20 + "px";
 }
 
 resize();
@@ -508,88 +503,7 @@ portfolio_en.forEach((project) => {
 });
 
 
-/*
-var projectAmount = portfolio_en.length
 
-
-for (let unity = 1; unity < projectAmount + 1; unity++) {
-
-  var titles = document.getElementsByClassName("title" + unity);
-  console.log(unity)
-  Array.prototype.forEach.call(titles, function (x) {
-    x.innerHTML = portfolio_en[unity - 1]["title"];
-  });
-
-  var clients = document.getElementsByClassName("client" + unity);
-  Array.prototype.forEach.call(clients, function (x) {
-    x.innerHTML = portfolio_en[unity - 1]["client"];
-  });
-
-  var descriptions = document.getElementsByClassName("description" + unity);
-  Array.prototype.forEach.call(descriptions, function (x) {
-    x.innerHTML = portfolio_en[unity - 1]["description"];
-  });
-
-  var hashtags = document.getElementsByClassName("hashtag" + unity);
-  Array.prototype.forEach.call(hashtags, function (x) {
-    x.innerHTML = portfolio_en[unity - 1]["hashtags"];
-  });
-
-  var pluss = document.getElementsByClassName("plus" + unity);
-  Array.prototype.forEach.call(pluss, function (x) {
-    x.innerHTML = portfolio_en[unity - 1]["plus"];
-  });
-
-  var pictures = document.getElementsByClassName("picture" + unity);
-  Array.prototype.forEach.call(pictures, function (x) {
-    x.src = portfolio_en[unity - 1]["picture"];
-  });
-
-}
-
-
-///////////////////////////////////////////////
-//////////// DATA PORTFOLIO FRENCH ////////////
-///////////////////////////////////////////////
-
-var projectAmount = portfolio_fr.length
-
-
-for (let unity = 1; unity < projectAmount + 1; unity++) {
-
-  var titles = document.getElementsByClassName("title_vf" + unity);
-  console.log(unity)
-  Array.prototype.forEach.call(titles, function (x) {
-    x.innerHTML = portfolio_fr[unity - 1]["title"];
-  });
-
-  var clients = document.getElementsByClassName("client_vf" + unity);
-  Array.prototype.forEach.call(clients, function (x) {
-    x.innerHTML = portfolio_fr[unity - 1]["client"];
-  });
-
-  var descriptions = document.getElementsByClassName("description_vf" + unity);
-  Array.prototype.forEach.call(descriptions, function (x) {
-    x.innerHTML = portfolio_fr[unity - 1]["description"];
-  });
-
-  var hashtags = document.getElementsByClassName("hashtag_vf" + unity);
-  Array.prototype.forEach.call(hashtags, function (x) {
-    x.innerHTML = portfolio_fr[unity - 1]["hashtags"];
-  });
-
-  var pluss = document.getElementsByClassName("plus_vf" + unity);
-  Array.prototype.forEach.call(pluss, function (x) {
-    x.innerHTML = portfolio_fr[unity - 1]["plus"];
-  });
-
-  var pictures = document.getElementsByClassName("picture_vf" + unity);
-  Array.prototype.forEach.call(pictures, function (x) {
-    x.src = portfolio_fr[unity - 1]["picture"];
-  });
-
-}
-*/
 ///////////////////////////////////////////////
 ////////// HOVER ON PORTFOLIO ITEMS ///////////
 ///////////////////////////////////////////////

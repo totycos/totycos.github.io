@@ -1153,9 +1153,15 @@ body {
 }
 
 .burger-flags {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  position: fixed;
+  bottom: 22px;
+  font-weight: 300;
+  font-size: 30px;
+  margin-left: 5%;
+  z-index: 10;
+  color: white;
+  right: 20px;
+  font-weight: 300;
 }
 
 .burger-flags > a {
@@ -1239,11 +1245,12 @@ body {
 
 .site-nav-list {
   position: absolute;
-  top: 30px;
   width: 100%;
   list-style: none;
   padding: 0;
   margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .site-nav-list li {
@@ -1304,6 +1311,10 @@ body {
 
 .ks-modal.open .site-nav-list li:nth-child(4) {
   transition: opacity 500ms ease-out 340ms, transform 400ms ease-out 340ms;
+}
+
+.burgerMenu1 {
+  font-weight: 300;
 }
 
 /*########################################*/
