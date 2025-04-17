@@ -290,7 +290,7 @@ nav {
 }
 /*
 .container-developer:hover .developer-info {
-  
+
   animation: 0.6s ease-out 0.5s forwards anime-skills-in;
 }
 
@@ -360,8 +360,8 @@ nav {
   background-color: black;
 }
 
-#SEO {
-  width: 66px;
+#devops {
+  width: 120px;
   padding-top: 4px;
   padding-left: 10px;
   padding-bottom: 3px;
